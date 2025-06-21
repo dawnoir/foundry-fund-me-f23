@@ -12,7 +12,7 @@ abstract contract CodeConstants {
                                CHAIN IDS
     //////////////////////////////////////////////////////////////*/
     uint256 public constant ETH_SEPOLIA_CHAIN_ID = 11155111;
-    uint256 public constant ZKSYNC_SEPOLIA_CHAIN_ID = 300;
+    uint256 public constant MY_CUSTOM_ZKSYNC_SEPOLIA_CHAIN_ID = 300;
     uint256 public constant LOCAL_CHAIN_ID = 31337;
 }
 
@@ -41,7 +41,7 @@ contract HelperConfig is CodeConstants, Script {
     //////////////////////////////////////////////////////////////*/
     constructor() {
         networkConfigs[ETH_SEPOLIA_CHAIN_ID] = getSepoliaEthConfig();
-        networkConfigs[ZKSYNC_SEPOLIA_CHAIN_ID] = getZkSyncSepoliaConfig();
+        networkConfigs[MY_CUSTOM_ZKSYNC_SEPOLIA_CHAIN_ID] = getZkSyncSepoliaConfig();
         // Note: We skip doing the local config
     }
 
